@@ -15,7 +15,7 @@ module.exports = context => {
 
   return new Promise((resolve, reject) => {
     let mainConfig = new ConfigParser(path.resolve(context.opts.projectRoot, 'config.xml'));
-    let name = mainConfig.name();
+    let name = 'App';
     let config = new ConfigParser(path.resolve(context.opts.projectRoot, 'platforms', 'ios', name, 'config.xml'));
     let MAIN_LANGUAGE = config.getGlobalPreference('MAIN_LANGUAGE');
     let ADDITIONAL_LANGUAGES = config.getGlobalPreference('ADDITIONAL_LANGUAGES');
